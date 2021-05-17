@@ -1,6 +1,12 @@
-<!--================ Start Header Menu Area =================-->
-<header class="header_area">
-
-</header>
-<!--================ End Header Menu Area =================-->
-    
+<div class="header">
+	<div class="container">
+		<div class="header-bar">
+			<h1 class="logo d-none d-md-block d-lg-block d-xl-block"><i class="zmdi zmdi-star-half">Shortly</i></h1>
+			<ul class="slider-menu">
+				<li><a href="/">Home</a></li>
+				<li><%= link_to t('views.shortener.new.copyright.source'), github_url, :target => '_blank' %></li>
+				<li><%= link_to t('views.shortener.new.copyright.contact'), contact_url %></li>
+			</ul>
+		</div>
+	</div>
+</div>

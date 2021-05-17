@@ -1,16 +1,16 @@
-<div class="limiter">
+<div class="limiter" style="margin-top: -58px;margin-bottom: -180px">
   <div class="container-login100">
-    <div class="wrap-login100">
+    <div class="wrap-login100" style="margin-top: -150px;">
 
       <%= form_for @shortener, {url: shorteners_path, class: "login100-form validate-form", novalidate: "novalidate"} do |f| %>
 
-        <span class="login100-form-title p-b-26">
-          Welcome
-        </span>
-
         <span class="login100-form-title p-b-48">
-          <i class="zmdi zmdi-font"></i>
+          <i class="zmdi zmdi-star-half">Shortly</i>
+	        <span class="login100-form-title">
+	        	Url Shortener
+	        </span>
         </span>
+        
 
         <div style="color: #f84bf8; ">
           <% flash.each do |key, value| %>
@@ -20,7 +20,7 @@
 
         <div class="wrap-input100 validate-input" data-validate = "Valid link is: http">
           <%= f.text_field :given_url, class: 'input100' %>
-          <span class="focus-input100" data-placeholder="Shorten Your Link"></span>
+          <span class="focus-input100" data-placeholder="Shorten Your Link (http://)"></span>
         </div>
 
         <div class="container-login100-form-btn">

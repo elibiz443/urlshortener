@@ -39,7 +39,7 @@ class ShortenersController < ApplicationController
 
     respond_to do |format|
       if @shortener.save
-        format.html { redirect_to shortener_url(@shortener), notice: "Link Successfully Shortened." }
+        format.html { redirect_to shortener_url(@shortener) }
         format.json { render :show, status: :created, location: @shortener }
       else
         format.html { render :new, status: :unprocessable_entity }
