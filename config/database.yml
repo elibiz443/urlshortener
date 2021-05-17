@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: elly
+  password: immortal
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: urlshortener_development
+
+test:
+  <<: *default
+  database: urlshortener_test
+
+production:
+  <<: *default
+  database: urlshortener_production
+  username: urlshortener
+  password: <%= ENV['URLSHORTENER_DATABASE_PASSWORD'] %>

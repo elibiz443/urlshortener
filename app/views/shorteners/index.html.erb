@@ -1,0 +1,37 @@
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <%= t('views.shortener.index.given_url') %>
+            </th>
+            <th>
+              <%= t('views.shortener.index.short_url') %>
+            </th>
+            <th>
+              <%= t('views.shortener.index.count') %>
+            </th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <% @shorteners.order('count DESC').each do |s| %>
+          <tr>
+            <td>
+              <%= link_to s.given_url, shortener_path(s) %>
+            </td>
+            <td>
+              <%= link_to s_url(s.slug), s_url(s.slug), :target => '_blank' %>
+            </td>
+            <td>
+              <%= s.count %>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+
+    </div>
+  </div>
+</div>
