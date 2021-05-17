@@ -1,7 +1,7 @@
 # Urlshortener
 Stop sharing awful links on social media: use this easy to use URL shortener. Just paste your long link into the input and click the button. Enjoy your short URL!
 
-![alt text](assets/shortly.png)
+![Shortly Screenshot](assets/shortly.png)
 
 ### Requirements
 
